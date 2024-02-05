@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hanger Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-image: url("bg-img.png");
+    }
+
+    h1 {
+      color: #ffdf00;
+    }
+
+    h2 {
+      color: #ffffff;
+    }
+
+    p {
+      color: #ffffff;
+    }
+
+    button {
+      background-color: #ffd700;
+      color: black;
+      padding: 15px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    #logo {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <img id="logo" src="hanger-game-logo.png" alt="Hanger Game Logo">
+
+  <h1>Welcome to Hanger Game!</h1>
+  <p>Can you guess the words and save the Hangaroo? Try your luck in the Hanger Game arena!</p>
+
+  <h2>Rules of the Game:</h2>
+  <p>1. Click on the letters to guess the word.</p>
+  <p>2. You have three incorrect guesses before the game is over.</p>
+  <p>3. Use clues wisely to reveal letters in the word.</p>
+  <p>4. Earn points for correct guesses and completing words.</p>
+  <p>5. Have fun!</p>
+
+
+  <button onclick="startGame()">Start Game</button>
+
+  <script>
+    function startGame() {
+      
+      const backgroundMusic = new Audio('bgmusic.mp3');
+      backgroundMusic.play();
+
+      setTimeout(() => {
+        window.location.href = 'hangaroo-game.html';
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

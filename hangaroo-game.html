@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Hanger Game</title>
+  
+</head>
+<body>
+    <div id="music-icon-container" onclick="toggleBackgroundMusic()">
+        🎵
+    </div>
+
+  <audio id="background-music" loop>
+    <audio id="buzz-sound" src="buzz.mp3" preload="auto"></audio>
+    <source src="bgmusic.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+    <div id="hangaroo-container">
+      <div id="question-container">
+        <h1 id="question"> GENERAL QUESTIONS</h1>
+        <p id="clue"></p>
+        <br>
+        <div id="incorrect-guesses">
+            <div class="incorrect-guess" id="guess-1"></div>
+            <div class="incorrect-guess" id="guess-2"></div>
+            <div class="incorrect-guess" id="guess-3"></div>
+          </div>
+          <br>
+        <p id="word-display"></p>
+      </div>
+      <div id="answer-container" style="display: none;"></div>
+
+      <div id="keyboard-container"></div>
+      <br>
+      <button id="vowel-button" onclick="useButtonClue('vowel')">Use Vowel Clue</button>
+      <button id="consonant-button" onclick="useButtonClue('consonant')">Use Consonant Clue</button>
+      
+      <br>
+      <br>
+      <div id="message-container"></div>
+<br>
+      <p id="score">Score: <span id="points">0</span></p>
+      <div id="game-over-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+          <span class="close" onclick="closeGameOverModal()">&times;</span>
+          <h1>Game Over!</h1>
+          <p>Your final score is <span id="final-score">0</span></p>
+          <button onclick="restartGame()">Try Again</button>
+        </div>
+      </div>
+    </div>
+
+    <img src="damit.png" alt="Damit Image" id="damit">
+    <img src="damit.png" alt="Damit Image" id="damit1">
+
+    <img src="hanger-game-logo.png" alt="Logo" id="logo">
+    <img src="hanger-game-logo.png" alt="Logo" id="logo1">
+    
+
+    <div id="hangaroo-name-container">
+        <p class="hangaroo-name">Adolar, Cyril</p>
+        <p class="hangaroo-name">Bernales, Jonas</p>
+        <p class="hangaroo-name">Placido, Diane</p>
+        <p class="hangaroo-name">Quezon, Ryan</p>
+        <p class="hangaroo-name">Reyes, Adrian</p>
+    </div>
+    <script src="hangaroo.js"></script>
+  </body>
+  </html>
